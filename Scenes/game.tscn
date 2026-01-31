@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://6kuofbf6acxv"]
 
 [ext_resource type="Texture2D" uid="uid://b6snwpsgrn6i3" path="res://Assets/sprites/world_tileset.png" id="1_ebmjs"]
-[ext_resource type="PackedScene" uid="uid://cqsusgys6qquk" path="res://Scenes/player_1_paddle.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://cqsusgys6qquk" path="res://Scenes/paddle.tscn" id="2_qxrlw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ebmjs"]
 texture = ExtResource("1_ebmjs")
@@ -296,9 +296,14 @@ tile_set = SubResource("TileSet_qxrlw")
 tile_map_data = PackedByteArray("AAD1/wEAAAAIAAEAAAD1//r/AAAHAAAAAAD1//v/AAAIAAEAAAD1//z/AAAIAAEAAAD1//3/AAAIAAEAAAD1//7/AAAIAAEAAAD1////AAAIAAEAAAD1/wAAAAAIAAEAAAD2//r/AAAHAAAAAAD3//r/AAAHAAAAAAD4//r/AAAHAAAAAAD5//r/AAAHAAAAAAD6//r/AAAHAAAAAAD7//r/AAAHAAAAAAD8//r/AAAHAAAAAAD9//r/AAAHAAAAAAD+//r/AAAHAAAAAAD///r/AAAHAAAAAAAAAPr/AAAHAAAAAAABAPr/AAAHAAAAAAACAPr/AAAHAAAAAAADAPr/AAAHAAAAAAAEAPr/AAAHAAAAAAAFAPr/AAAHAAAAAAAGAPr/AAAHAAAAAAAHAPr/AAAHAAAAAAAIAPr/AAAHAAAAAAAJAPr/AAAHAAAAAAAKAPr/AAAHAAAAAAAKAAEAAAAIAAEAABAKAAAAAAAIAAEAABAKAP//AAAIAAEAABAKAP7/AAAIAAEAABAKAP3/AAAIAAEAABAKAPz/AAAIAAEAABAKAPv/AAAIAAEAABD2/wUAAAAIAAEAAAD3/wUAAAAIAAEAAAD4/wUAAAAIAAEAAAD5/wUAAAAIAAEAAAD6/wUAAAAIAAEAAAD7/wUAAAAIAAEAAAD8/wUAAAAIAAEAAAD9/wUAAAAIAAEAAAD+/wUAAAAIAAEAAAD//wUAAAAIAAEAAAAAAAUAAAAIAAEAAAABAAUAAAAIAAEAAAACAAUAAAAIAAEAAAADAAUAAAAIAAEAAAAEAAUAAAAIAAEAAAAFAAUAAAAIAAEAAAAGAAUAAAAIAAEAAAAHAAUAAAAIAAEAAAAIAAUAAAAIAAEAAAAJAAUAAAAIAAEAAAAKAAUAAAAIAAAAADD1/wUAAAAIAAAAAGD1/wIAAAAIAAEAAAD1/wMAAAAIAAEAAAD1/wQAAAAIAAEAAAAKAAIAAAAIAAEAAAAKAAMAAAAIAAEAAAAKAAQAAAAIAAEAAAA=")
 tile_set = SubResource("TileSet_wrm1d")
 
-[node name="Player1 Paddle" parent="Level" unique_id=997591908 instance=ExtResource("2_qxrlw")]
-position = Vector2(-141, 3)
-motion_mode = 1
+[node name="Paddle" parent="Level" unique_id=997591908 instance=ExtResource("2_qxrlw")]
+position = Vector2(-128, 0)
+player_input_type = 1
+
+[node name="Paddle2" parent="Level" unique_id=1496868015 instance=ExtResource("2_qxrlw")]
+position = Vector2(128, 0)
+rotation = 4.712389
+player_input_type = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=279431919]
 zoom = Vector2(3, 3)
