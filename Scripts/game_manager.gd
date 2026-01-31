@@ -1,10 +1,5 @@
 extends Node
-@onready var wall: Area2D = $"../Wall"
-@onready var wall_2: Area2D = $"../Wall2"
 
-@onready var score_1: Label = $"../Score1"
-@onready var score_2: Label = $"../Score 2"
-
-
-func add_point():
-	wall.is_
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()

@@ -2,6 +2,8 @@ class_name Ball
 extends Area2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var tile_map_layer_arena: TileMapLayer = $"../Map Design/TileMapLayer Arena"
+@onready var hit_sound: AudioStreamPlayer2D = $HitSound
+
 
 const INITIAL_SPEED = 200
 var speed = INITIAL_SPEED
@@ -21,6 +23,8 @@ func reset():
 
 
 func _on_body_entered(body: Node2D) -> void:
+	hit_sound.play()
+	hit_sound.pitch_scale = randf_range(0.75, 2)
 	if body is Paddle:
 		if body.player_input_type == 1:
 			direction = Vector2(1, randf() * 2 - 1).normalized()
