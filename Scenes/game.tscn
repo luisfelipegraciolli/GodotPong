@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cqsusgys6qquk" path="res://Scenes/paddle.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://hcurxicfuy1x" path="res://Scenes/ball.tscn" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://bn6yp55uetuas" path="res://Scenes/wall.tscn" id="4_3dryh"]
+[ext_resource type="FontFile" uid="uid://drdnrdjayakgc" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="5_wowpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ebmjs"]
 texture = ExtResource("1_ebmjs")
@@ -278,6 +279,11 @@ texture = ExtResource("1_ebmjs")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 
+[sub_resource type="LabelSettings" id="LabelSettings_i6g32"]
+font = ExtResource("5_wowpa")
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D" unique_id=966684738]
 
 [node name="Level" type="Node" parent="." unique_id=515373970]
@@ -315,12 +321,32 @@ collision_layer = 1
 slide_on_ceiling = false
 player_input_type = 2
 
-[node name="Wall" parent="Level" unique_id=444084729 instance=ExtResource("4_3dryh")]
+[node name="Wall" parent="Level" unique_id=444084729 node_paths=PackedStringArray("score_label") instance=ExtResource("4_3dryh")]
 position = Vector2(-40, 0)
+score_label = NodePath("../Score1")
 
-[node name="Wall2" parent="Level" unique_id=1770732992 instance=ExtResource("4_3dryh")]
+[node name="Wall2" parent="Level" unique_id=1770732992 node_paths=PackedStringArray("score_label") instance=ExtResource("4_3dryh")]
 position = Vector2(40, 0)
 rotation = 3.1415927
+score_label = NodePath("../Score 2")
+
+[node name="Score1" type="Label" parent="Level" unique_id=1109226139]
+offset_left = -40.0
+offset_top = -64.0
+offset_bottom = -41.0
+text = "0"
+label_settings = SubResource("LabelSettings_i6g32")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score 2" type="Label" parent="Level" unique_id=581009932]
+offset_top = -64.0
+offset_right = 52.0
+offset_bottom = -41.0
+text = "0"
+label_settings = SubResource("LabelSettings_i6g32")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=279431919]
 zoom = Vector2(3, 3)
