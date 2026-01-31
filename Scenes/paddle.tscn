@@ -8,6 +8,7 @@ size = Vector2(32, 8)
 
 [node name="Paddle" type="CharacterBody2D" unique_id=997591908]
 rotation = 1.5707964
+collision_layer = 2
 script = ExtResource("1_krcey")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=316568026]

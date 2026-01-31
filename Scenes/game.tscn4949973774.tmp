@@ -277,6 +277,11 @@ texture = ExtResource("1_ebmjs")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 
+[sub_resource type="GDScript" id="GDScript_wrm1d"]
+script/source = "class_name Arena
+extends TileMapLayer
+"
+
 [node name="Game" type="Node2D" unique_id=966684738]
 
 [node name="Level" type="Node" parent="." unique_id=515373970]
@@ -296,20 +301,19 @@ tile_set = SubResource("TileSet_qxrlw")
 [node name="TileMapLayer Arena" type="TileMapLayer" parent="Level/Map Design" unique_id=2087311984]
 tile_map_data = PackedByteArray("AAD1//r/AAAIAAEAAAD2//r/AAAIAAEAAAD3//r/AAAIAAEAAAD4//r/AAAIAAEAAAD5//r/AAAIAAEAAAD6//r/AAAIAAEAAAD7//r/AAAIAAEAAAD8//r/AAAIAAEAAAD9//r/AAAIAAEAAAD+//r/AAAIAAEAAAD///r/AAAIAAEAAAAAAPr/AAAIAAEAAAABAPr/AAAIAAEAAAACAPr/AAAIAAEAAAADAPr/AAAIAAEAAAAEAPr/AAAIAAEAAAAFAPr/AAAIAAEAAAAGAPr/AAAIAAEAAAAHAPr/AAAIAAEAAAAIAPr/AAAIAAEAAAAJAPr/AAAIAAEAAAAKAPr/AAAIAAEAAAD2/wUAAAAHAAAAAAD3/wUAAAAHAAAAAAD4/wUAAAAHAAAAAAD5/wUAAAAHAAAAAAD6/wUAAAAHAAAAAAD7/wUAAAAHAAAAAAD8/wUAAAAHAAAAAAD9/wUAAAAHAAAAAAD+/wUAAAAHAAAAAAD//wUAAAAHAAAAAAAAAAUAAAAHAAAAAAABAAUAAAAHAAAAAAACAAUAAAAHAAAAAAADAAUAAAAHAAAAAAAEAAUAAAAHAAAAAAAFAAUAAAAHAAAAAAAGAAUAAAAHAAAAAAAHAAUAAAAHAAAAAAAIAAUAAAAHAAAAAAAJAAUAAAAHAAAAAAAKAAUAAAAHAAAAAAD1/wUAAAAHAAAAAAA=")
 tile_set = SubResource("TileSet_wrm1d")
+script = SubResource("GDScript_wrm1d")
 
-[node name="Ball" parent="Level" unique_id=1384874483 instance=ExtResource("2_wrm1d")]
-position = Vector2(-72, 70)
+[node name="Ball" parent="Level/Map Design" unique_id=1384874483 instance=ExtResource("2_wrm1d")]
 
-[node name="Paddle" parent="Level" unique_id=997591908 instance=ExtResource("2_qxrlw")]
+[node name="Paddle" parent="Level/Map Design" unique_id=997591908 instance=ExtResource("2_qxrlw")]
 position = Vector2(-128, 0)
 collision_layer = 1
 slide_on_ceiling = false
 player_input_type = 1
 
-[node name="Paddle2" parent="Level" unique_id=1496868015 instance=ExtResource("2_qxrlw")]
+[node name="Paddle2" parent="Level/Map Design" unique_id=1496868015 instance=ExtResource("2_qxrlw")]
 position = Vector2(128, 0)
 rotation = -1.5707964
-collision_layer = 1
 slide_on_ceiling = false
 player_input_type = 2
 
