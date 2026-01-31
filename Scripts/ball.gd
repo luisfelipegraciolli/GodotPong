@@ -1,14 +1,15 @@
+class_name Ball
 extends Area2D
 
 @onready var tile_map_layer_arena: TileMapLayer = $"../Map Design/TileMapLayer Arena"
 
-const INITIAL_SPEED = 100
+const INITIAL_SPEED = 200
 var speed = INITIAL_SPEED
 var direction: Vector2 = Vector2.LEFT
 @onready var initial_pos = position
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	speed += delta * 2
+	speed += delta * 3
 	position += speed * direction * delta
 	
 func reset():

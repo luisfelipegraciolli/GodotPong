@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bn6yp55uetuas"]
+
+[ext_resource type="Script" uid="uid://c6if4jbi5eft0" path="res://Scripts/wall.gd" id="1_d155t"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wrm1d"]
+normal = Vector2(1, 0)
+distance = -176.0
+
+[node name="Wall" type="Area2D" unique_id=444084729]
+script = ExtResource("1_d155t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509566358]
+shape = SubResource("WorldBoundaryShape2D_wrm1d")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
