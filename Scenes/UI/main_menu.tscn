@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://eqt1vhuggtbl"]
+
+[ext_resource type="FontFile" uid="uid://drdnrdjayakgc" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_5wsvm"]
+[ext_resource type="Texture2D" uid="uid://datujbp1dklri" path="res://Scenes/UI/main_pong_menu.png" id="1_i2xx2"]
+[ext_resource type="Script" uid="uid://dpvypc7x4inwk" path="res://Scenes/UI/main_menu.gd" id="1_o14dv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o14dv"]
+texture = ExtResource("1_i2xx2")
+modulate_color = Color(0.4351923, 0.43519226, 0.43519226, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wsvm"]
+bg_color = Color(1, 0.007843138, 0.38039216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6900472, 0.37907872, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_size = 18
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2xx2"]
+bg_color = Color(0.61960787, 0, 0.22352941, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6900472, 0.37907872, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o14dv"]
+bg_color = Color(0.61960787, 0, 0.22352941, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6900472, 0.37907872, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i2xx2"]
+font = ExtResource("1_5wsvm")
+font_size = 64
+font_color = Color(0.84313726, 1, 1, 1)
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control" unique_id=1703205003]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o14dv")
+
+[node name="Panel" type="Panel" parent="." unique_id=1267405583]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_o14dv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=270833136]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -100.0
+offset_right = 144.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=64207291]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0.55236953, 0.003989269, 0.9845442, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_5wsvm")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i2xx2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o14dv")
+text = "Play"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=488836652]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0.55236953, 0.003989269, 0.9845442, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_5wsvm")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i2xx2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o14dv")
+text = "Exit
+"
+
+[node name="Title" type="Label" parent="." unique_id=1479211924]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -272.0
+offset_top = 128.0
+offset_right = 272.0
+offset_bottom = 192.0
+grow_horizontal = 2
+text = "Cozy Pong"
+label_settings = SubResource("LabelSettings_i2xx2")
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

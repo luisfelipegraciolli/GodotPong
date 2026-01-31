@@ -282,6 +282,7 @@ sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 
 [sub_resource type="LabelSettings" id="LabelSettings_i6g32"]
 font = ExtResource("5_wowpa")
+font_color = Color(0.84313726, 1, 1, 1)
 outline_size = 9
 outline_color = Color(0, 0, 0, 1)
 
@@ -331,12 +332,12 @@ player_input_type = 2
 
 [node name="Wall" parent="Level" unique_id=444084729 node_paths=PackedStringArray("score_label") instance=ExtResource("4_3dryh")]
 position = Vector2(-40, 0)
-score_label = NodePath("../Score1")
+score_label = NodePath("../Score 2")
 
 [node name="Wall2" parent="Level" unique_id=1770732992 node_paths=PackedStringArray("score_label") instance=ExtResource("4_3dryh")]
 position = Vector2(40, 0)
 rotation = 3.1415927
-score_label = NodePath("../Score 2")
+score_label = NodePath("../Score1")
 
 [node name="Score1" type="Label" parent="Level" unique_id=1109226139]
 z_index = -1
