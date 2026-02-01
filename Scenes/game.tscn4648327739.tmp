@@ -366,5 +366,5 @@ zoom = Vector2(3, 3)
 
 [node name="Pause" parent="." unique_id=1221618770 instance=ExtResource("8_v158k")]
 visible = false
-offset_top = -24.0
-offset_bottom = -24.0
+offset_top = -56.0
+offset_bottom = -56.0

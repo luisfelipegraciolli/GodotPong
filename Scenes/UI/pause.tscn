@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://ca8j06eemm3ru"]
+
+[ext_resource type="FontFile" uid="uid://drdnrdjayakgc" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_2ceew"]
+[ext_resource type="Script" uid="uid://c6h467d4mg3l3" path="res://Scenes/UI/pause.gd" id="1_3vu23"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_evds0"]
+font = ExtResource("1_2ceew")
+font_size = 64
+font_color = Color(0.84313726, 1, 1, 1)
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcn70"]
+bg_color = Color(1, 0.007843138, 0.38039216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6900472, 0.37907872, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_size = 18
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fny3v"]
+bg_color = Color(0.61960787, 0, 0.22352941, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6900472, 0.37907872, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lw4m2"]
+bg_color = Color(0.61960787, 0, 0.22352941, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6900472, 0.37907872, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_size = 1
+shadow_offset = Vector2(4, 4)
+
+[node name="Pause" type="Control" unique_id=1221618770]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5199988, 0.47999877)
+script = ExtResource("1_3vu23")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=734699320]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -72.5
+offset_right = 95.0
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=469278102]
+layout_mode = 2
+text = "❚❚"
+label_settings = SubResource("LabelSettings_evds0")
+horizontal_alignment = 1
+
+[node name="Return" type="Button" parent="VBoxContainer" unique_id=1559723076]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0.55236953, 0.003989269, 0.9845442, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_2ceew")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcn70")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fny3v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lw4m2")
+text = "Return"
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=1979983941]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0.55236953, 0.003989269, 0.9845442, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_2ceew")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_hcn70")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fny3v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lw4m2")
+text = "Menu
+"
+
+[connection signal="pressed" from="VBoxContainer/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
