@@ -286,10 +286,6 @@ font_color = Color(0.84313726, 1, 1, 1)
 outline_size = 9
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_wowpa"]
-font = ExtResource("5_wowpa")
-font_size = 8
-
 [node name="Game" type="Node2D" unique_id=966684738]
 
 [node name="Level" type="Node" parent="." unique_id=515373970]
@@ -356,16 +352,6 @@ offset_right = 52.0
 offset_bottom = -41.0
 text = "0"
 label_settings = SubResource("LabelSettings_i6g32")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label" type="Label" parent="Level" unique_id=1627676649]
-offset_left = -192.0
-offset_top = -112.0
-offset_right = 192.0
-offset_bottom = -89.0
-text = "Press 'Select' or R to restart"
-label_settings = SubResource("LabelSettings_wowpa")
 horizontal_alignment = 1
 vertical_alignment = 1
 
