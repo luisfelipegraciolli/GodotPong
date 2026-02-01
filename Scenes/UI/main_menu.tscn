@@ -106,6 +106,18 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i2xx2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o14dv")
 text = "Play"
 
+[node name="Controls" type="Button" parent="VBoxContainer" unique_id=517080711]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0.55236953, 0.003989269, 0.9845442, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_5wsvm")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_5wsvm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i2xx2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o14dv")
+text = "Controls"
+
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=488836652]
 layout_mode = 2
 size_flags_vertical = 3
@@ -133,4 +145,5 @@ text = "Cozy Pong"
 label_settings = SubResource("LabelSettings_i2xx2")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
