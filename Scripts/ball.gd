@@ -26,7 +26,7 @@ func _on_body_entered(body: Node2D) -> void:
 	hit_sound.play()
 	hit_sound.pitch_scale = randf_range(0.75, 2)
 	if body is Paddle:
-		if body.player_input_type == 1:
+		if body.input_type == body.PlayerInput.PLAYER_ONE:
 			direction = Vector2(1, randf() * 2 - 1).normalized()
 		else:
 			direction = Vector2(-1, randf() * 2 - 1).normalized()

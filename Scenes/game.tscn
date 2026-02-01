@@ -320,14 +320,13 @@ tile_set = SubResource("TileSet_wrm1d")
 position = Vector2(-128, 0)
 collision_layer = 1
 slide_on_ceiling = false
-player_input_type = 1
 
 [node name="Paddle2" parent="Level" unique_id=1496868015 instance=ExtResource("2_qxrlw")]
 position = Vector2(128, 0)
 rotation = -1.5707964
 collision_layer = 1
 slide_on_ceiling = false
-player_input_type = 2
+input_type = 1
 
 [node name="Wall" parent="Level" unique_id=444084729 node_paths=PackedStringArray("score_label") instance=ExtResource("4_3dryh")]
 position = Vector2(-40, 0)
