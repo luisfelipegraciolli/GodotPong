@@ -74,7 +74,7 @@ corner_detail = 10
 shadow_size = 1
 shadow_offset = Vector2(4, 4)
 
-[node name="Controls" type="Control" unique_id=1175803873]
+[node name="Controls" type="Control" unique_id=1175803873 groups=["pause"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

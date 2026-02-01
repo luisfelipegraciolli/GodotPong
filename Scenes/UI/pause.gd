@@ -1,6 +1,6 @@
 extends Control
 
-@onready var main = $"../"
+@onready var main: Node2D = $"../"
 
 func _on_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")

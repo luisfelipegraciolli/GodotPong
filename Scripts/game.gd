@@ -5,7 +5,7 @@ extends Node2D
 @onready var tile_map1: TileMapLayer = $"Level/Map Design/TileMapLayer Background1"
 @onready var tile_map_arena: TileMapLayer = $"Level/Map Design/TileMapLayer Arena"
 @onready var pause_menu: Control = $Pause
-var paused = false
+var paused: bool = false
 
 # Called when the node enters the scene tree for the first time.
 

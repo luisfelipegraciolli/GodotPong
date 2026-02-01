@@ -5,18 +5,17 @@ extends Area2D
 @onready var hit_sound: AudioStreamPlayer2D = $HitSound
 
 
-const INITIAL_SPEED = 200
-var speed = INITIAL_SPEED
+const INITIAL_SPEED: float = 200
+@export var speed: float = INITIAL_SPEED
 var direction: Vector2 = Vector2.LEFT
 
-@onready var initial_pos = position
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+@onready var initial_pos: Vector2 = position
+
 func _process(delta: float) -> void:
 	speed += delta * 3
 	position += speed * direction * delta
 	
-	
-func reset():
+func reset() -> void:
 	direction = Vector2.LEFT
 	position = initial_pos
 	speed = INITIAL_SPEED
